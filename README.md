@@ -18,7 +18,7 @@ postgres=# \q
 ```
 #####Utworzenie bazy danych
 ```
-sudo -u postgres createdb <dbname> --owner tester
+sudo -u postgres createdb <dbname> --owner <user>
 ```
 
 ####Konfiguracja aplikacji
