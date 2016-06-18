@@ -64,9 +64,9 @@ end
 * */modules/login.rb* - moduł logujący / wylogowujący użytkownika.
 * */modules/session.rb* - definiuje klasę ```Session```, która przechowuje identyfikator obecnie zalogowanego użytkownika, typ użytkownika i jego pseudonim. Przy wylogowaniu następuje reset tych wszystkich parametrów.
 * */modules/controllers* - kontrolery pośredniczące pomiędzy widokami, a bazą danych. Łączą się z bazą danych za pomocą klasy ```DB``` zdefiniowanej w */db/db.rb*
-* */views* - widoki, czyli okna aplikacji *Shoes*. Widoki używają funkcji zdefiniowanych w kontrolerach, żeby zdobyć potrzebne informacje.
+* */views* - widoki, czyli okna aplikacji *shoes*. Widoki używają funkcji zdefiniowanych w kontrolerach, żeby zdobyć potrzebne informacje.
 * *config.rb* - konfiguracja bazy danych aplikacji.
-* *shoes.rb* - konfiguruje ustawienia *Shoes* i uruchamia pierwszą aplikację *Shoes*.
+* *shoes.rb* - konfiguruje ustawienia *shoes* i uruchamia pierwsze okno *shoes*.
 ####Interfejs
 Interfejs jest bardzo intuicyjny i nie wymaga dalszych instrukcji.
 
