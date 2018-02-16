@@ -1,27 +1,27 @@
 # Projekt z baz danych 2016
-##Instalacja
+## Instalacja
 Program napisany jest w języku *Ruby* z wykorzystaniem biblioteki graficznej *shoes*.
-####Instalacja *shoes*
+#### Instalacja *shoes*
 Aby aplikacja funkcjonowała poprawnie należy pobrać *shoes 3.3.1* ze strony http://shoesrb.com/downloads/.
-####Instalacja gemów
+#### Instalacja gemów
 ```
 gem install pg
 gem install digest
 ```
-####Przygotowywanie bazy danych
-#####Utworzenie użytkownika
+#### Przygotowywanie bazy danych
+##### Utworzenie użytkownika
 ```
 sudo -u postgres createuser <user>
 sudo -u postgres psql postgres
 postgres=# ALTER USER <user> WITH password <password>;
 postgres=# \q
 ```
-#####Utworzenie bazy danych
+##### Utworzenie bazy danych
 ```
 sudo -u postgres createdb <dbname> --owner <user>
 ```
 
-####Konfiguracja aplikacji
+#### Konfiguracja aplikacji
 Aby skonfigurować aplikację należy zmodyfikować plik *config.rb*
 ```ruby
 CONFIG = {
@@ -31,17 +31,17 @@ CONFIG = {
     dbname: <dbname> # nazwa utworzonej bazy danych
 }
 ``` 
-##Aplikacja
-####Utworzenie schematu bazy danych
+## Aplikacja
+#### Utworzenie schematu bazy danych
 ```
 rake init
 ```
-####Populacja bazy danych przykładowymi danymi
+#### Populacja bazy danych przykładowymi danymi
 ```
 rake seed
 ```
 Polecenie ```rake setup``` jest równoważne uruchomieniu następująco ```rake init``` i ```rake seed```.
-####Uruchomienie aplikacji
+#### Uruchomienie aplikacji
 ```
 rake run
 ```
@@ -49,7 +49,7 @@ lub
 ```
 rake
 ```
-####Podział logiczny aplikacji
+#### Podział logiczny aplikacji
 * */db/db.rb* - moduł łączący się bezpośrednio z bazą danych, udostępniający funkcje "yieldujące" połączenie: *with_connection* oraz  *with_connection_deal_errors*. Tych funkcji można potem używać następująco:
 ```ruby
 DB.with_connection do |con|
@@ -68,7 +68,7 @@ end
 * *config.rb* - konfiguracja bazy danych aplikacji.
 * *shoes.rb* - konfiguruje ustawienia *shoes* i uruchamia pierwsze okno *shoes*.
 
-####Interfejs
+#### Interfejs
 Interfejs jest bardzo intuicyjny i nie wymaga dalszych instrukcji.
 
 *oskarito*
